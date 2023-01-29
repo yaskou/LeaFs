@@ -12,7 +12,7 @@ let convertHiragana (name: string) =
         | character when "おこそとのほもよろんごぞどぼぽょ".Contains character -> 5
         | _ -> 0
     )
-    |> List.filter (fun i -> i <> 0)
+    |> List.filter ((<>) 0)
 
 let calculateAffinity (numbers: list<int>) =
     let rec factorial n =
